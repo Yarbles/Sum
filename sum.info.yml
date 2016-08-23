@@ -1,0 +1,5 @@
+name: Sum
+description: Adds two user-provided numbers together and returns the sum
+type: module
+core: 8.x
+package: Custom
