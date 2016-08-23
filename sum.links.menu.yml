@@ -1,0 +1,6 @@
+sum.sum:
+  title: 'Sum module'
+  description: 'Adds two user-provided numbers together and returns the sum'
+  parent: main
+
+//want to add link to main menu, not admin menu
