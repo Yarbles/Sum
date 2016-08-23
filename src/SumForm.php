@@ -45,4 +45,9 @@ public function buildForm(array $form, FormStateInterface $form_state) {
 }
 
 public function submitForm(array &$form, FormStateInterface $form_state) {
-  drupal_set_message($this->t
+  $first_number = $form_state['values']['top_number'];
+  $second_number = $form_state['values']['bottom_number'];
+  $sum = $first_number + $second_number;
+  $tempstore = \Drupal::service('user.private_tempstore')->get('sum'); // no $_SESSION allowed, it seems. throwing in towel.
+
+  // might be easier to use drupal_set_message($this->t
