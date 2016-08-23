@@ -15,5 +15,30 @@ class SumForm extends FormBase {
    */
 
   public function getFormId() {
-    return 'sum_form';
+    return 'sum';
   }
+
+  /**
+* {@inheritDoc}
+*/
+
+public function buildForm(array $form, FormStateInterface $form_state) {
+  $form['top_number'] = array(
+      '#title' => 'Top number',
+      '#type' => 'number',
+      '#description' => t('Please enter a starting number to add.'),
+  );
+
+  $form['bottom_number'] = array(
+      '#title' => 'Bottom number',
+      '#type' => 'number',
+      '#description' => t('Please enter a number to add to the starting number.'),
+  );
+
+  $form['submit'] = array(
+      '#type' => 'submit',
+      '#value' => 'Calculate Sum',
+  );
+
+  return $form;
+}
